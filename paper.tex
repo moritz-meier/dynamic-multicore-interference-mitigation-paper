@@ -178,7 +178,7 @@ More sophisticated control schemes, i.e. using performance and efficiency cores 
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=1\linewidth]{diagrams/control-loop.drawio.pdf}
+    \includegraphics[width=1\linewidth]{diagrams/control-loop.pdf}
     \caption{Control loop for dynamic interference mitigation}
     \label{fig:control_loop}
 \end{figure}
@@ -211,7 +211,7 @@ to the size of the execution slices, so that the influence is a constant already
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=1\linewidth]{diagrams/measurement.drawio.pdf}
+    \includegraphics[width=1\linewidth]{diagrams/measurement.pdf}
     \caption{Execution of a critical task in discrete slices, interrupted by the runtime to observe the computational progress. Y-Axis shows the execution speed; each unit area under the curve represents a fixed amount of computational work. Execution slice $A$ between $t_1$ and $t_2$ is not affected by interference, execution slice $B$ between $t_2$ and $t_3$ is. Both execution slices represent the same amount of computational progress $df$, but slice $A$ is executed faster, then slice $B$ ($t_2 - t_1 < t_3 - t_2$).}
     \label{fig:preempt_progress}
 \end{figure}
@@ -288,7 +288,7 @@ shared-memory. These requests are then realized by the parent control processes 
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.8\linewidth]{diagrams/demonstrator.drawio.pdf}
+    \includegraphics[width=0.8\linewidth]{diagrams/demonstrator.pdf}
     \caption{Demonstrator implementation. A central process spawns primary and secondary processes. The primary process measure the interference and issues mitigation requests to the control process. This control request then acts on the requests by freezing and thawing the secondary, interference causing processes via \ac{CGroups}.}
     \label{fig:demonstrator}
 \end{figure}
